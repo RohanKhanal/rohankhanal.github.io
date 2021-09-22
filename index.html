@@ -114,8 +114,6 @@
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Rohan Khanal</h1>
       <p>I'm <span class="typed" data-typed-items="Student, Gamer, Stock Market analyst"></span></p>
-      <h8 id="digital_date"></h8><br>
-      <h9 id="digital_clock"></h9>
       <div class="social-links">
         <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
         <a href="https://www.facebook.com/rohan.khanal.96" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
@@ -875,76 +873,7 @@ function dark() {
    element.classList.toggle("dark-mode");
 }
 </script>
-    <!-- Adding JS Digital Clock -->
-    <script>
-      function digidate()
-      {
-        var date = new Date();
-        var d = date.getDate();
-        var mo = date.getMonth();
-        var y = date.getFullYear();
-      
-        d = check(d);
-        mo = check(mo);
 
-        function check(i)
-        {
-          if (i<10)
-          {
-            i="0"+i;
-          }
-          return i;
-        }
-
-        document.getElementById("digital_date").innerHTML = d+"-"+mo+"-"+y;
-        setTimeout(digidate, 60000);
-      }
-      digidate();
-  </script>
-    </script>
-
-    <script>
-      function digital()
-      {
-          var date = new Date();
-          var a =":";
-          var h = date.getHours();
-          var m = date.getMinutes();
-          var s = date.getSeconds();
-          var session="PM";
-
-          h = check(h);
-          m = check(m);
-          s = check(s);
-
-          if(h>12)
-              {
-                  session="PM";
-              }
-          else
-              {
-                  session="AM"
-              }
-
-          if(h>12)
-              {
-                  h=h-12;
-              }
-          function check(i)
-          {
-              if (i<10)
-                  {
-                      i="0"+i;
-                  }
-              return i;
-          
-          }
-
-          document.getElementById("digital_clock").innerHTML = h+a+m+a+s+" "+session;
-          setTimeout(digital, 1000);
-      }
-      digital();
-  </script>
 
 
 </body>
